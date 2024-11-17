@@ -90,10 +90,10 @@ async function getInputValue(){
   }
   else if(value === "whoami"){
     trueValue(value);
-    createText("Hello! I'm Michele.")
+    createText("Hello! I'm <span class='blue'>Michele</span>.")
     createText("I'm <span class='blue'>18 years</span> old and have been a developer <span class='blue'>since 2018</span>. \
       <br />I started with small projects using the <a href='https://hub.spigotmc.org/javadocs/bukkit/' target='_blank' class='blue'>Bukkit </a> API to develop Minecraft plugins. \
-      <br />Over time, I shifted my focus to cybersecurity and system administration and now, \
+      <br />Over time, I shifted my focus to <span class='blue'>cybersecurity</span> and <span class='blue'>system administration</span> and now, \
       i'm part of <span class='blue'>3</span> CTF teams that compete <span class='blue'>nationally and globally</span>.\
       <br />I speak two languages fluently: <span class='blue'>Italian</span> and <span class='blue'>English</span>. I also have <span class='blue'>conversational</span> proficiency in French, Spanish, and Arabic.")
   }
