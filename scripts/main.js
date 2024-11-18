@@ -39,7 +39,7 @@ async function open_terminal(){
   await delay(100);
   createCode("project -a", "View all my public projects.");
   await delay(100);
-  createCode("contacts -a", "View all my social networks.");
+  createCode("social -a", "View all my social networks.");
   await delay(100);
   createCode("clear", "clear the screen.");
   await delay(100);
@@ -91,18 +91,18 @@ async function getInputValue(){
   }
   else if(value === "whoami"){
     trueValue(value);
-    createText("Hello! I'm <span class='blue'>Michele</span>.")
-    createText("I'm <span class='blue'>18 years</span> old and I have been a developer <span class='blue'>since 2018</span>. \
-      <br />I have started with small projects using the <a href='https://hub.spigotmc.org/javadocs/bukkit/' target='_blank' class='blue'>Bukkit </a> API to develop Minecraft plugins. \
-      <br /><br />Over time, I shifted my focus to <span class='blue'>cybersecurity</span> and <span class='blue'>system administration</span> and now, \
-      I'm part of <span class='blue'>3</span> CTF teams that compete <span class='blue'>nationally and globally</span>, and with them I .\
-      <br /><br />I speak two languages fluently: <span class='blue'>Italian</span> and <span class='blue'>English</span>. I also have <span class='blue'>conversational</span> proficiency in French, Spanish, and Arabic.")
+    createText("Hello! I'm <span class='green'>Michele</span>.")
+    createText("I'm <span class='green'>18 years</span> old and I have been a developer <span class='green'>since 2018</span>. \
+      <br />I have started with small projects using the <a href='https://hub.spigotmc.org/javadocs/bukkit/' target='_blank' class='green'>Bukkit</a> API to develop Minecraft plugins. \
+      <br /><br />Over time, I shifted my focus to <span class='green'>cybersecurity</span> and <span class='green'>system administration</span> and now, \
+      I'm part of <span class='green'>3</span> CTF teams that compete <span class='green'>nationally and globally</span>, and with them I .\
+      <br /><br />I speak two languages fluently: <span class='green'>Italian</span> and <span class='green'>English</span>. I also have <span class='green'>conversational</span> proficiency in French, Spanish, and Arabic.")
   }
   else if(value === "projects -a"){
     trueValue(value);
     createText("Take a view of my public projects on my \
-      <span class='blue'> \
-      <a href='https://github.com/Gioppyy' target='_blank' class='blue'> \
+      <span class='green'> \
+      <a href='https://github.com/Gioppyy' target='_blank' class='green'> \
       <i class='fab fa-github blue'></i> GitHub</a> \
       </span>")
   }
@@ -112,9 +112,9 @@ async function getInputValue(){
   }
   else if(value === "social -a"){
     trueValue(value);
-    createText("<a href='https://discord.gg' target='_blank'><i class='fab fa-discord white'></i> Add me on Discord: <span class='blue'>gioppy.</span></a>")
-    createText("<a href='https://github.com/gioppyy' target='_blank'><i class='fab fa-github white'></i> Follow me on github: <span class='blue'>github.com/gioppyy</span></a>")
-    createText("<a href='https://www.instagram.com/michele._.cava/' target='_blank'><i class='fab fa-instagram white'></i> Follow me on Instagram: <span class='blue'>instagram.com/michele._.cava</span></a>")
+    createText("<a href='https://discord.gg' target='_blank'><i class='fab fa-discord'></i> Add me on Discord: <span class='green'>gioppy.</span></a>")
+    createText("<a href='https://github.com/gioppyy' target='_blank'><i class='fab fa-github'></i> Follow me on github: <span class='green'>github.com/gioppyy</span></a>")
+    createText("<a href='https://www.instagram.com/michele._.cava/' target='_blank'><i class='fab fa-instagram'></i> Follow me on Instagram: <span class='green'>instagram.com/michele._.cava</span></a>")
   }
   else if(value === "social"){
     falseValue(value);

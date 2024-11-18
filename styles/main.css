@@ -32,7 +32,7 @@
 }
 a{
   text-decoration: none;
-  color: rgb(238, 238, 238);
+  color: rgb(69, 207, 15);
 }
 body{
   background-color:#424040;
@@ -76,7 +76,7 @@ body{
 }
 .red{background-color:#F5544D;}
 .yellow{background-color:#FABD2F;}
-.green{background-color:#47D043;}
+.green{background-color: rgb(26, 112, 9);}
 div.title{
   flex:1;
   text-align:center;
