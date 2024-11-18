@@ -95,7 +95,10 @@ async function getInputValue(){
     createText("I'm <span class='green'>18 years</span> old and I have been a developer <span class='green'>since 2018</span>. \
       <br />I have started with small projects using the <a href='https://hub.spigotmc.org/javadocs/bukkit/' target='_blank' class='green'>Bukkit</a> API to develop Minecraft plugins. \
       <br /><br />Over time, I shifted my focus to <span class='green'>cybersecurity</span> and <span class='green'>system administration</span> and now, \
-      I'm part of <span class='green'>3</span> CTF teams that compete <span class='green'>nationally and globally</span>, and with them I .\
+      I'm part of <span class='green'>3</span> CTF teams that compete <span class='green'>nationally and globally</span>, and with them I participated in many competitions like: <br /><br />\
+      <a href='https://cyberchallenge.it/' target='_blank'> <span class='green'>CyberChallenge.IT</span></a>, \
+      <a href='https://uiuc.tf/' target='_blank'> <span class='green'>UIUCTF</span></a>, \
+      <a href='https://downunderctf.com/' target='_blank'> <span class='green'>DOWNUNDERCTF</span></a>.\
       <br /><br />I speak two languages fluently: <span class='green'>Italian</span> and <span class='green'>English</span>. I also have <span class='green'>conversational</span> proficiency in French, Spanish, and Arabic.")
   }
   else if(value === "projects -a"){
