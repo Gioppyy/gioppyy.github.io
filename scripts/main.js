@@ -6,7 +6,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 app.addEventListener("keypress", async function(event){
   if(event.key === "Enter"){
     await delay(150);
-   getInputValue();
+    getInputValue();
    
     removeInput();
     await delay(150);
@@ -101,7 +101,7 @@ async function getInputValue(){
       <a href='https://downunderctf.com/' target='_blank'> <span class='green'>DOWNUNDERCTF</span></a>.\
       <br /><br />I speak two languages fluently: <span class='green'>Italian</span> and <span class='green'>English</span>. I also have <span class='green'>conversational</span> proficiency in French, Spanish, and Arabic.")
   }
-  else if(value === "projects -a"){
+  else if(value === "project -a"){
     trueValue(value);
     createText("Take a view of my public projects on my \
       <span class='green'> \
@@ -109,7 +109,7 @@ async function getInputValue(){
       <i class='fab fa-github blue'></i> GitHub</a> \
       </span>")
   }
-  else if(value === "projects"){
+  else if(value === "project"){
     falseValue(value);
     createText("Do you mean projects -a?")
   }
