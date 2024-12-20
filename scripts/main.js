@@ -44,7 +44,6 @@ async function open_terminal(){
   createCode("clear", "clear the screen.");
   await delay(100);
 
-  await delay(500);
   new_line();
 }
 
@@ -95,10 +94,12 @@ async function getInputValue(){
     createText("I'm <span class='green'>18 years</span> old and I have been a developer <span class='green'>since 2018</span>. \
       <br />I have started with small projects using the <a href='https://hub.spigotmc.org/javadocs/bukkit/' target='_blank' class='green'>Bukkit</a> API to develop Minecraft plugins. \
       <br /><br />Over time, I shifted my focus to <span class='green'>CyberSecurity</span> and <span class='green'>System Administration</span> and now, \
-      I'm part of <span class='green'>3</span> CTF teams that compete <span class='green'>nationally and globally</span>, and with them I participated in many competitions like: <br /><br />\
+      I'm the team leader of <a href='https://codevinci.it/' target='_blank'> <span class='green'>CodeVinci</span></a>, \
+      I'm also part of other <span class='green'>2</span> CTF teams that compete <span class='green'>nationally and globally</span>, and with them I participated in many competitions like: <br /><br />\
       <a href='https://cyberchallenge.it/' target='_blank'> <span class='green'>CyberChallenge.IT</span></a>, \
       <a href='https://uiuc.tf/' target='_blank'> <span class='green'>UIUCTF</span></a>, \
       <a href='https://downunderctf.com/' target='_blank'> <span class='green'>DOWNUNDERCTF</span></a>.\
+      <br /><br />I also had the <span class='green'>opportunity</span> to be an <span class='green'>organizer</span> in the these team's CTFs \
       <br /><br />I speak two languages fluently: <span class='green'>Italian</span> and <span class='green'>English</span>. I also have <span class='green'>conversational</span> proficiency in French, Spanish, and Arabic.")
   }
   else if(value === "project -a"){
