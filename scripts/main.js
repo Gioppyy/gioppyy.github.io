@@ -34,14 +34,14 @@ app.addEventListener("click", () => {
   input.focus();
 });
 
-const getCommands = async (delay) => {
+const getCommands = async (d) => {
   createText("List of commands:")
-  if (delay)
+  if (d)
     await delay(100);
   
   for (const cmd of commands) {
     createCode(cmd[0], cmd[1]);
-    if (delay)
+    if (d)
       await delay(100);
   }
 }
@@ -57,7 +57,7 @@ const open_terminal = async () => {
   await delay(400);
 
   createText("---------------------------");
-  getCommands(true);
+  await getCommands(true);
 
   new_line();
 }
