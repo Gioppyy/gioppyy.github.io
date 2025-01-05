@@ -8,7 +8,8 @@ const commands = [
   ["clear", "Clear the screen."]
 ];
 
-let last_command = "";
+const last_command = [""];
+let index = 0;
 
 app.addEventListener("keypress", async (event) => {
   if(event.key === "Enter"){
@@ -24,7 +25,12 @@ app.addEventListener("keypress", async (event) => {
 app.addEventListener("keydown", (e) => {
   if (e.key === "ArrowUp") {
     const input = document.querySelector("input");
-    input.value = last_command;
+
+    input.value = last_command[index];
+
+    if (index > 0) 
+      index -= 1;
+
     input.focus();
   }
 });
@@ -86,7 +92,8 @@ const new_line = () => {
 
 const getInputValue = async () => {
   const value = document.querySelector("input").value.trim();
-  last_command = value;
+  last_command.push(value);
+  index = last_command.length-1;
   if(value === "all"){
     commandResponse(true, value);
     getCommands(false);
