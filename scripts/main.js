@@ -173,7 +173,7 @@ const createProject = (link, title, text) => {
   a.href = link;
   a.target = "_blank";
   a.innerHTML =
-    `<p class="code">${title}</p> <p><span class='text'> ${text} </span></p>`;
+    `<p class="code typing-animation">${title}</p> <p><span class='text typing-animation'> ${text} </span></p>`;
 
   app.appendChild(a);
 }
@@ -181,20 +181,19 @@ const createProject = (link, title, text) => {
 const createCode = (code, text) => {
   const p = document.createElement("p");
   p.setAttribute("class", "code");
-  p.innerHTML =
-    `${code} <br/><span class='text'> ${text} </span>`;
+  p.innerHTML = `<span class="typing-animation">${code} <br/><span class='text'> ${text} </span></span>`;
   app.appendChild(p);
 }
 
 const createText = (text) => {
   const p = document.createElement("p");
-  p.innerHTML = text;
+  p.innerHTML = `<span class="typing-animation">${text}</span>`;
   app.appendChild(p);
 }
 
 const createErrorText = (text) => {
   const p = document.createElement("p");
-  p.innerText = text;
+  p.innerHTML = `<span class="typing-animation">${text}</span>`;
   app.appendChild(p);
 }
 
