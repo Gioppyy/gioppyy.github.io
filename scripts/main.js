@@ -43,28 +43,29 @@ app.addEventListener("click", () => {
 const getCommands = async (d) => {
   createText("List of commands:")
   if (d)
-    await delay(100);
+    await delay(500);
   
   for (const cmd of commands) {
     createCode(cmd[0], cmd[1]);
     if (d)
-      await delay(100);
+      await delay(400);
   }
 }
 
 const open_terminal = async () => {
   createText("Loading all necessary libraries..")
-  await delay(700);
+  await delay(900);
   createText("Starting local server at http://127.0.0.1:8080/");
-  await delay(700);
+  await delay(1200);
   createText("Validating credentials...")
-  await delay(700);
+  await delay(500);
   createText("Welcome back, root!")
-  await delay(400);
+  await delay(500);
 
   createText("---------------------------");
   await getCommands(true);
 
+  await delay(150);
   new_line();
 }
 
