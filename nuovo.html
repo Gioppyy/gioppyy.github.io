@@ -308,11 +308,6 @@
             <div class="nes-container is-dark with-title" style="margin-bottom: 30px;">
                 <p class="title">PROFILO</p>
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-                    <div style="text-align: center;">
-                        <i class="nes-mario"></i>
-                        <i class="nes-ash"></i>
-                        <i class="nes-pokeball"></i>
-                    </div>
                     <p>Ciao! La passione per lo sviluppo è nata durante il lockdown alle medie dove tramite lo sviluppo di plugin Minecraft mi sono avvicinato a questo mondo. <br/>
                     da qualche anno ho spostato il mio focus sulla sicurezza informatica e la gestione di sistemi IT</p>
                 </div>
@@ -408,7 +403,7 @@
 
         <!-- Pagina Contatti -->
             <div id="contact" class="content-section" style="margin-top: 30px; ">
-                <h2><i class="nes-icon heart"></i> CONTATTAMI</h2>
+                <h2><i class="nes-icon star"></i> CONTATTAMI</h2>
 
                 <div class="nes-container is-dark with-title">
                     <p class="title">CONNETTITI</p>
@@ -428,7 +423,6 @@
                 </div>
             </div>
 
-        <!-- Footer -->
         <footer>
             <p>© 2025 gioppy. Tutti i diritti riservati.</p>
             <p>Sviluppato col <i class="nes-icon heart is-small"></i> e Nes.css</p>
@@ -436,7 +430,6 @@
     </div>
 
     <script>
-        // Gestione navigazione tra pagine
         document.addEventListener('DOMContentLoaded', function() {
             const navButtons = document.querySelectorAll('.nav-btn');
             const pages = document.querySelectorAll('.page');
@@ -471,29 +464,6 @@
                 });
             }
 
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-
-                    // Simulazione invio
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.textContent;
-
-                    submitBtn.textContent = 'INVIO IN CORSO...';
-                    submitBtn.classList.add('is-disabled');
-
-                    // Simulazione ritardo di invio
-                    setTimeout(() => {
-                        alert('Messaggio inviato con successo! Ti risponderò presto.');
-                        submitBtn.textContent = originalText;
-                        submitBtn.classList.remove('is-disabled');
-                        contactForm.reset();
-                    }, 1500);
-                });
-            }
-
-            // Effetti speciali per gli elementi
             const specialButtons = document.querySelectorAll('.special-btn');
             specialButtons.forEach(btn => {
                 btn.addEventListener('mouseenter', function() {
@@ -504,10 +474,6 @@
                     this.style.transform = 'scale(1)';
                 });
             });
-
-            // Simulazione caricamento iniziale
-            console.log('> Portfolio caricato con successo!');
-            console.log('> Sistema pronto per la navigazione.');
         });
     </script>
 </body>
