@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michele's Portfolio</title>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #209cee;
+            --secondary-color: #92cc41;
+            --dark-bg: #212529;
+            --darker-bg: #1a1d21;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 4px solid var(--primary-color);
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            text-shadow: 3px 3px 0 #000;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .active {
+            box-shadow: 0 5px 0 0 #000;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .page-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 4px solid var(--primary-color);
+            border-radius: 8px;
+        }
+
+        .hero h2 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .skill-card {
+            background-color: var(--darker-bg);
+            padding: 20px;
+            border: 3px solid var(--primary-color);
+            border-radius: 8px;
+        }
+
+        .skill-title {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background-color: var(--darker-bg);
+            padding: 20px;
+            border: 3px solid var(--secondary-color);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        .project-link,
+        .project-link:visited,
+        .project-link:hover,
+        .project-link:active,
+        .project-link:focus {
+            text-decoration: none;
+        }
+
+        .project-link p {
+            color: #fff;
+        }
+
+        .project-title {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            background-color: var(--darker-bg);
+            padding: 30px;
+            border: 3px solid var(--primary-color);
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .second {
+            color: #CFCBCA;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #444;
+            color: #888;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .skills-container, .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pixel-border {
+            position: relative;
+        }
+
+        .pixel-border::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid var(--secondary-color);
+            z-index: -1;
+        }
+
+        .special-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(146, 204, 65, 0.2),
+                rgba(32, 156, 238, 0.2)
+            );
+            transform: rotate(45deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">>_ gioppy.</h1>
+
+            <div class="nav-container">
+                <button type="button" class="nes-btn is-primary nav-btn active" data-page="home">Home</button>
+                <button type="button" class="nes-btn is-success nav-btn" data-page="about">Chi Sono</button>
+                <button type="button" class="nes-btn is-warning nav-btn" data-page="projects">Progetti</button>
+                <button type="button" class="nes-btn is-error nav-btn" data-page="skills">Skills</button>
+                <button type="button" class="nes-btn is-primary nav-btn" data-page="contact">Contatti</button>
+            </div>
+        </header>
+
+        <section id="home" class="page active">
+            <div class="hero">
+                <h2>> BENVENUTO NEL MIO MONDO DIGITALE</h2>
+                <p>Esplora il mio portfolio come se fosse un gioco. Naviga tra le sezioni per scoprire chi sono, i miei progetti e le mie competenze. Pronto a partire?</p>
+                <button type="button" class="nes-btn is-success special-btn" id="start-btn">INIZIA L'AVVENTURA</button>
+            </div>
+
+        </section>
+
+        <section id="about" class="page">
+            <h2 class="page-title">> CHI SONO</h2>
+
+            <div class="nes-container is-dark with-title" style="margin-bottom: 30px;">
+                <p class="title">PROFILO</p>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                    <div style="text-align: center;">
+                        <i class="nes-mario"></i>
+                        <i class="nes-ash"></i>
+                        <i class="nes-pokeball"></i>
+                    </div>
+                    <p>Ciao! La passione per lo sviluppo è nata durante il lockdown alle medie dove tramite lo sviluppo di plugin Minecraft mi sono avvicinato a questo mondo. <br/>
+                    da qualche anno ho spostato il mio focus sulla sicurezza informatica e la gestione di sistemi IT</p>
+                </div>
+            </div>
+
+            <div class="nes-container is-dark with-title">
+                <p class="title">Educazione</p>
+                <div class="lists">
+                    <ul class="nes-list is-circle">
+                        <li><strong>2020 - 2025:</strong> Diploma in Informatica e Telecomunicazioni</li>
+                        <li class="second"><strong>2024:</strong> Corso CyberChallenge.it - UniPR</li>
+                        <li><strong>2025:</strong> Training Camp olycyber</li>
+                        <li class="second"><strong>2025:</strong> Team leader & insegnante - Team CTF CodeVinci</li>
+                        <li><strong>2025 - ora:</strong> Ing. delle tecnologie informatiche - UniPR</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="page">
+            <h2 class="page-title">> I MIEI PROGETTI</h2>
+
+            <div class="projects-grid">
+                <a href="https://fidasparma.it" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <h3 class="project-title">Fidas Parma</h3>
+                        <p>Ho creato un design responsive e moderno per il sito dell'associazione di donatori di sangue Fidas Parma</p>
+                        <div class="project-tags">
+                            <span class="nes-badge">
+                                <span class="is-primary">Wordpress</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-warning">PHP</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-card">
+                    <a href="https://github.com/Gioppyy/Ghosts-n-goblin" target="_blank" class="project-link">
+                        <h3 class="project-title">Ghosts 'n Goblins</h3>
+                        <p>Per un esame universitario ho sviluppato in coppia con la mia ragazza una replica del gioco Ghosts 'n Goblins</p>
+                        <div class="project-tags">
+                            <span class="nes-badge">
+                                <span class="is-error">Python</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-success">Aseprite</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://github.com/Gioppyy/GPAccountTransfer" target="_blank" class="project-link">
+                        <h3 class="project-title">GPAccountTransfer</h3>
+                        <p>Piattaforma di e-commerce con tema videogiochi retrò, completa di carrello, pagamento e sistema di gestione prodotti.</p>
+                        <div class="project-tags">
+                            <span class="nes-badge">
+                                <span class="is-primary">React</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-success">Node.js</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-warning">MongoDB</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="page">
+            <h2 class="page-title">> LE MIE SKILLS</h2>
+
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3 class="skill-title">Amministrazione IT</h3>
+                    <p style="margin-top: 10px;">Docker, Ansible, Graphana, Prometheus</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="skill-title">Linguaggi di programmazione</h3>
+                    <p style="margin-top: 10px;">Java, Python, PHP, NodeJS, C++, C, Go</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="skill-title">Back-end Development</h3>
+                    <p style="margin-top: 10px;">Spring, Express, MySQL, MongoDB, Redis</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagina Contatti -->
+            <div id="contact" class="content-section" style="margin-top: 30px; ">
+                <h2><i class="nes-icon heart"></i> CONTATTAMI</h2>
+
+                <div class="nes-container is-dark with-title">
+                    <p class="title">CONNETTITI</p>
+                    <div class="contact-info">
+                        <p><i class="nes-icon google is-small"></i> Blog: <a href="https://hackmd.io/@gioppy" target="_blank">@gioppy</a></p>
+                        <p><i class="nes-icon github is-small"></i> GitHub: <a href="https://discord.gg/" target="_blank">@gioppyy</a></p>
+                        <p><i class="nes-icon instagram is-small"></i> Instagram: <a href="https://instagram.com/michele._.cava" target="_blank">@michele._.cava</a></p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <p style="margin-bottom: 20px;">Pronto per iniziare un progetto insieme?</p>
+                    <button class="nes-btn is-success">
+                        <i class="nes-icon trophy is-small"></i>
+                        INIZIA COLLABORAZIONE
+                    </button>
+                </div>
+            </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 gioppy. Tutti i diritti riservati.</p>
+            <p>Sviluppato col <i class="nes-icon heart is-small"></i> e Nes.css</p>
+        </footer>
+    </div>
+
+    <script>
+        // Gestione navigazione tra pagine
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const pages = document.querySelectorAll('.page');
+            const startBtn = document.getElementById('start-btn');
+
+            function changePage(pageId) {
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+
+                navButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                document.getElementById(pageId).classList.add('active');
+                document.querySelector(`.nav-btn[data-page="${pageId}"]`).classList.add('active');
+            }
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const pageId = this.getAttribute('data-page');
+                    changePage(pageId);
+                });
+            });
+
+            if (startBtn) {
+                startBtn.addEventListener('click', function() {
+                    changePage('about');
+                    this.classList.add('is-disabled');
+                    this.textContent = 'AVVENTURA INIZIATA!';
+                    console.log('> Avventura iniziata! Esplora il portfolio.');
+                });
+            }
+
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // Simulazione invio
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+
+                    submitBtn.textContent = 'INVIO IN CORSO...';
+                    submitBtn.classList.add('is-disabled');
+
+                    // Simulazione ritardo di invio
+                    setTimeout(() => {
+                        alert('Messaggio inviato con successo! Ti risponderò presto.');
+                        submitBtn.textContent = originalText;
+                        submitBtn.classList.remove('is-disabled');
+                        contactForm.reset();
+                    }, 1500);
+                });
+            }
+
+            // Effetti speciali per gli elementi
+            const specialButtons = document.querySelectorAll('.special-btn');
+            specialButtons.forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // Simulazione caricamento iniziale
+            console.log('> Portfolio caricato con successo!');
+            console.log('> Sistema pronto per la navigazione.');
+        });
+    </script>
+</body>
+</html>
