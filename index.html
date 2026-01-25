@@ -1,36 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
-  <link href="styles/all.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
-  <title>Michele aka Gioppy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michele's Portfolio</title>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="./styles/style.css" rel="stylesheet">
+    <script src="./scripts/main.js"></script>
+
 </head>
 
 <body>
-  <div class="container">
-    <div class="menu">
-      <div class="buttons-flex">
-        <div class="button red"></div>
-        <div class="button yellow"></div>
-        <div class="button green"></div>
-      </div>
-      <div class="title">
-        <a href="https://github.com/Gioppyy" target="_blank">
-          <h1><i class='fab fa-github'></i> github.com/Gioppyy</h1>
-        </a>
-      </div>
+    <div class="container">
+        <header>
+            <h1 class="logo">>_ gioppy.</h1>
+
+            <div class="nav-container">
+                <button type="button" class="nes-btn is-primary nav-btn active" data-page="home">Home</button>
+                <button type="button" class="nes-btn is-success nav-btn" data-page="about">Chi Sono</button>
+                <button type="button" class="nes-btn is-warning nav-btn" data-page="projects">Progetti</button>
+                <button type="button" class="nes-btn is-error nav-btn" data-page="skills">Skills</button>
+                <button type="button" class="nes-btn is-primary nav-btn" data-page="contact">Contatti</button>
+            </div>
+        </header>
+
+        <section id="home" class="page active">
+            <div class="hero">
+                <h2>> BENVENUTO NEL MIO MONDO DIGITALE</h2>
+                <p>Esplora il mio portfolio come se fosse un gioco. Naviga tra le sezioni per scoprire chi sono, i miei
+                    progetti e le mie competenze. Pronto a partire?</p>
+                <button type="button" class="nes-btn is-success special-btn" id="start-btn">INIZIA L'AVVENTURA</button>
+            </div>
+
+        </section>
+
+        <section id="about" class="page">
+            <h2 class="page-title">> CHI SONO</h2>
+
+            <div class="nes-container is-dark with-title" style="margin-bottom: 30px;">
+                <p class="title">PROFILO</p>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                    <div style="text-align: center;">
+                        <i class="nes-ash"></i>
+                    </div>
+                    <p>Ciao! La passione per lo sviluppo è nata durante il lockdown alle medie dove tramite lo sviluppo
+                        di plugin Minecraft mi sono avvicinato a questo mondo. <br />
+                        da qualche anno ho spostato il mio focus sulla sicurezza informatica e la gestione di sistemi IT
+                    </p>
+                </div>
+            </div>
+
+            <div class="nes-container is-dark with-title">
+                <p class="title">Educazione</p>
+                <div class="lists">
+                    <ul class="nes-list is-circle">
+                        <li><strong>2020 - 2025:</strong> Diploma in Informatica e Telecomunicazioni</li>
+                        <li class="second"><strong>2024:</strong> Corso CyberChallenge.it - UniPR</li>
+                        <li><strong>2025:</strong> Training Camp olycyber</li>
+                        <li class="second"><strong>2025:</strong> Team leader & insegnante - Team CTF CodeVinci</li>
+                        <li><strong>2025 - ora:</strong> Ing. delle tecnologie informatiche - UniPR</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="page">
+            <h2 class="page-title">> I MIEI PROGETTI</h2>
+
+            <div class="projects-grid">
+                <a href="https://fidasparma.it" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <h3 class="project-title">fidasparma.it</h3>
+                        <p>Ho creato un design responsive e moderno per il sito dell'associazione di donatori di sangue
+                            Fidas Parma</p>
+                        <div class="project-tags">
+                            <span class="nes-badge">
+                                <span class="is-primary">Wordpress</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-warning">PHP</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-card">
+                    <a href="https://github.com/Gioppyy/Ghosts-n-goblin" target="_blank" class="project-link">
+                        <h3 class="project-title">Ghosts 'n Goblins</h3>
+                        <p>Per un esame universitario ho sviluppato in coppia con la mia ragazza una replica del gioco
+                            Ghosts 'n Goblins</p>
+                        <div class="project-tags">
+                            <span class="nes-badge">
+                                <span class="is-error">Python</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-success">Aseprite</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://github.com/Gioppyy/GPAccountTransfer" target="_blank" class="project-link">
+                        <h3 class="project-title">GPAccountTransfer</h3>
+                        <p>Nella gestione di server minecraft capita spesso che gli utenti cambino username perdendo i dati,
+                            ho dunque sviluppato questo tool per permettere di trasferire i dati da un username ad un altro scansionando
+                            il filesystem ed i database.
+                        </p>
+                        <div class="project-tags">
+                            <span class="nes-badge">
+                                <span class="is-primary">Python</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-success">MySQL</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://www.olympusmc.it" target="_blank" class="project-link">
+                        <h3 class="project-title">OlympusMC Network</h3>
+                        <p>OlympusMC è un network che tratta server minecraft e creator management, ho ideato e realizzato
+                            l'infrastruttura del network e diversi software per la gestione di esso.
+                        </p>
+                        <div class="project-tags">
+                            <span class="nes-badge">
+                                <span class="is-error">Java</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-success">Docker</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-warning">NodeJS</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://github.com/gioppyy/gpbds" target="_blank" class="project-link">
+                        <h3 class="project-title">GPBDS</h3>
+                        <p>Durante la gestione di alcuni network sul gioco Fivem, mi sono spesso trovato ad affrontare situazioni
+                            in cui software terzi in lua creavano delle backdoor, ho dunque sviluppato questo tool in python che
+                            tramite il riconoscimento di pattern sospetti crea un report accurato delle possibili vulnerabilità.
+                        </p>
+                        <div class="project-tags">
+                            <span class="nes-badge">
+                                <span class="is-error">Python</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-success">Regex</span>
+                            </span>
+                            <span class="nes-badge">
+                                <span class="is-warning"><HTML></HTML></span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="page">
+            <h2 class="page-title">> LE MIE SKILLS</h2>
+
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3 class="skill-title">Amministrazione IT</h3>
+                    <p style="margin-top: 10px;">Docker, Ansible, Graphana, Prometheus</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="skill-title">Linguaggi di programmazione</h3>
+                    <p style="margin-top: 10px;">Java, Python, PHP, NodeJS, C++, C, Go</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="skill-title">Back-end Development</h3>
+                    <p style="margin-top: 10px;">Spring, Express, MySQL, MongoDB, Redis</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="contact" class="content-section" style="margin-top: 30px; ">
+            <h2><i class="nes-icon star"></i> CONTATTAMI</h2>
+
+            <div class="nes-container is-dark with-title">
+                <p class="title">CONNETTITI</p>
+                <div class="contact-info">
+                    <p><i class="nes-icon google is-small"></i> Blog: <a href="https://hackmd.io/@gioppy"
+                            target="_blank">@gioppy</a></p>
+                    <p><i class="nes-icon github is-small"></i> GitHub: <a href="https://discord.gg/"
+                            target="_blank">@gioppyy</a></p>
+                    <p><i class="nes-icon instagram is-small"></i> Instagram: <a
+                            href="https://instagram.com/michele._.cava" target="_blank">@michele._.cava</a></p>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="margin-bottom: 20px;">Pronto per iniziare un progetto insieme?</p>
+                <button class="nes-btn is-success">
+                    <i class="nes-icon trophy is-small"></i>
+                    INIZIA COLLABORAZIONE
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 gioppy. Tutti i diritti riservati.</p>
+            <p>Sviluppato col <i class="nes-icon heart is-small"></i> e Nes.css</p>
+        </footer>
     </div>
-    <div id="app">
-    </div>
-  </div>
-  <script src="scripts/main.js"></script>
-  <script>
-    open_terminal();
-  </script>
 </body>
 
 </html>
