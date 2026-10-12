@@ -278,9 +278,17 @@
         }
 
         .blog-content img {
+            display: block;
             max-width: 100%;
+            height: auto;
+            margin: 20px auto;
             image-rendering: auto;
             border: 3px solid var(--primary-color);
+        }
+
+        /* Un paragrafo che contiene solo un'immagine non deve aggiungere spazi vuoti */
+        .blog-content p:has(> img:only-child) {
+            margin-bottom: 0;
         }
 
         .blog-content blockquote {

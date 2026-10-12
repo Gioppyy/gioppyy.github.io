@@ -8,7 +8,7 @@ excerpt: Il racconto di come ho scoperto e segnalato una SQL injection in un ser
 ## Scoperta della vulnerabilità
 Tutto è iniziato durante un corso di programmazione Flutter per docenti. Durante la lezione, il docente ha mostrato un'applicazione che comunicava con un endpoint simulato, rappresentante un'ipotetica API per la gestione di un database di artisti.
 
-<img src="posts/assets/SJdIR4Gexe.png" alt="image" style="display:block; margin:auto;" />
+![image](posts/assets/SJdIR4Gexe.png)
 
 Spinto dalla curiosità, ho analizzato il comportamento di questa pagina osservando il codice sorgente, dove ho trovato la seguente funzione JavaScript:
 
