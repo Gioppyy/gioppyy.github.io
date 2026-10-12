@@ -1,0 +1,15 @@
+{
+  "name": "gioppyy-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio e blog di gioppy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-blog.js"
+  },
+  "dependencies": {
+    "highlight.js": "^11.10.0",
+    "marked": "^12.0.2",
+    "marked-highlight": "^2.1.4"
+  }
+}

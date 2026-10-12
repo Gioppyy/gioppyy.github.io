@@ -1,0 +1,72 @@
+/* Tema syntax highlighting per highlight.js, in stile retro dark.
+   Le classi .hljs-* sono applicate al momento del build. */
+.hljs {
+    color: #e6e6e6;
+    background: transparent;
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: #7d8a7d;
+    font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-doctag,
+.hljs-name {
+    color: #209cee;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+    color: #92cc41;
+}
+
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+    color: #f7d51d;
+}
+
+.hljs-title,
+.hljs-title.function_,
+.hljs-built_in,
+.hljs-builtin-name {
+    color: #f78b3f;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class {
+    color: #e76e55;
+}
+
+.hljs-meta,
+.hljs-params {
+    color: #c0c0c0;
+}
+
+.hljs-deletion {
+    color: #e76e55;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
