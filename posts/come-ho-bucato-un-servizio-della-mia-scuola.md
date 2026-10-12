@@ -1,6 +1,6 @@
 ---
 title: Come ho bucato un servizio della mia scuola
-date: 2026-10-12
+date: 2025-05-02
 tags: [sqli, websec, writeup]
 excerpt: Il racconto di come ho scoperto e segnalato una SQL injection in un servizio della mia scuola.
 ---
