@@ -4,11 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Michele's Portfolio</title>
-    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet"
+        integrity="sha384-O6AjLjfUmUlVtjVwX4WKPHE+6hSARLX8hRW1n+5w6b8dY0ED4fylO/udKa4UraEf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="./styles/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"
+        integrity="sha384-/TQbtLCAerC3jgaim+N78RZSDYV7ryeoBCVqTuzRrFec2akfBkHS7ACQ3PQhvMVi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"
+        integrity="sha384-+VfUPEb0PdtChMwmBcBmykRMDd+v6D/oFmB3rZM/puCMDYcIvF968OimRh4KQY9a" crossorigin="anonymous"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/blog.js"></script>
 
 </head>
 
@@ -22,6 +30,7 @@
                 <button type="button" class="nes-btn is-success nav-btn" data-page="about">Chi Sono</button>
                 <button type="button" class="nes-btn is-warning nav-btn" data-page="projects">Progetti</button>
                 <button type="button" class="nes-btn is-error nav-btn" data-page="skills">Skills</button>
+                <button type="button" class="nes-btn nav-btn" data-page="blog">Blog</button>
                 <button type="button" class="nes-btn is-primary nav-btn" data-page="contact">Contatti</button>
             </div>
         </header>
@@ -45,7 +54,7 @@
                     <div style="text-align: center;">
                         <i class="nes-ash"></i>
                     </div>
-                    <p>Ciao! Mi chiamo Michele ed ho 19 anni, ho iniziato a programmare durante il lockdown alle medie all'età di 14 anni dove tramite lo sviluppo
+                    <p>Ciao! Mi chiamo Michele ed ho 20 anni, ho iniziato a programmare durante il lockdown alle medie all'età di 14 anni dove tramite lo sviluppo
                         di plugin Minecraft mi sono avvicinato a questo mondo. <br />
                         Da qualche anno ho spostato il mio focus sulla sicurezza informatica e la gestione di sistemi IT
                     </p>
@@ -70,7 +79,7 @@
             <h2 class="page-title">> I MIEI PROGETTI</h2>
 
             <div class="projects-grid">
-                <a href="https://fidasparma.it" target="_blank" class="project-link">
+                <a href="https://fidasparma.it" target="_blank" rel="noopener noreferrer" class="project-link">
                     <div class="project-card">
                         <h3 class="project-title">fidasparma.it</h3>
                         <p>Ho creato un design responsive e moderno per il sito dell'associazione di donatori di sangue
@@ -86,7 +95,7 @@
                     </div>
                 </a>
                 <div class="project-card">
-                    <a href="https://github.com/Gioppyy/Ghosts-n-goblin" target="_blank" class="project-link">
+                    <a href="https://github.com/Gioppyy/Ghosts-n-goblin" target="_blank" rel="noopener noreferrer" class="project-link">
                         <h3 class="project-title">Ghosts 'n Goblins</h3>
                         <p>Per un esame universitario ho sviluppato in coppia con la mia ragazza una replica del gioco
                             Ghosts 'n Goblins</p>
@@ -102,7 +111,7 @@
                 </div>
 
                 <div class="project-card">
-                    <a href="https://github.com/Gioppyy/GPAccountTransfer" target="_blank" class="project-link">
+                    <a href="https://github.com/Gioppyy/GPAccountTransfer" target="_blank" rel="noopener noreferrer" class="project-link">
                         <h3 class="project-title">GPAccountTransfer</h3>
                         <p>Nella gestione di server minecraft capita spesso che gli utenti cambino username perdendo i dati,
                             ho dunque sviluppato questo tool per permettere di trasferire i dati da un username ad un altro scansionando
@@ -120,7 +129,7 @@
                 </div>
 
                 <div class="project-card">
-                    <a href="https://www.olympusmc.it" target="_blank" class="project-link">
+                    <a href="https://www.olympusmc.it" target="_blank" rel="noopener noreferrer" class="project-link">
                         <h3 class="project-title">OlympusMC Network</h3>
                         <p>OlympusMC è un network che tratta server minecraft e creator management, ho ideato e realizzato
                             l'infrastruttura del network e diversi software per la gestione di esso.
@@ -140,7 +149,7 @@
                 </div>
 
                 <div class="project-card">
-                    <a href="https://github.com/gioppyy/gpbds" target="_blank" class="project-link">
+                    <a href="https://github.com/gioppyy/gpbds" target="_blank" rel="noopener noreferrer" class="project-link">
                         <h3 class="project-title">GPBDS</h3>
                         <p>Durante la gestione di alcuni network sul gioco Fivem, mi sono spesso trovato ad affrontare situazioni
                             in cui software terzi in lua creavano delle backdoor, ho dunque sviluppato questo tool in python che
@@ -183,6 +192,20 @@
             </div>
         </section>
 
+        <section id="blog" class="page">
+            <h2 class="page-title">> BLOG</h2>
+
+            <div id="blog-list" class="blog-list"></div>
+
+            <article id="blog-post" class="blog-post" hidden>
+                <button type="button" class="nes-btn blog-back" id="blog-back">&lt; INDIETRO</button>
+                <div class="nes-container is-dark">
+                    <p class="blog-meta" id="blog-post-meta"></p>
+                    <div class="blog-content" id="blog-post-content"></div>
+                </div>
+            </article>
+        </section>
+
         <div id="contact" class="content-section" style="margin-top: 30px; ">
             <h2><i class="nes-icon star"></i> CONTATTAMI</h2>
 
@@ -190,11 +213,11 @@
                 <p class="title">CONNETTITI</p>
                 <div class="contact-info">
                     <p><i class="nes-icon google is-small"></i> Blog: <a href="https://hackmd.io/@gioppy"
-                            target="_blank">@gioppy</a></p>
-                    <p><i class="nes-icon github is-small"></i> GitHub: <a href="https://discord.gg/"
-                            target="_blank">@gioppyy</a></p>
+                            target="_blank" rel="noopener noreferrer">@gioppy</a></p>
+                    <p><i class="nes-icon github is-small"></i> GitHub: <a href="https://github.com/gioppyy"
+                            target="_blank" rel="noopener noreferrer">@gioppyy</a></p>
                     <p><i class="nes-icon instagram is-small"></i> Instagram: <a
-                            href="https://instagram.com/michele._.cava" target="_blank">@michele._.cava</a></p>
+                            href="https://instagram.com/michele._.cava" target="_blank" rel="noopener noreferrer">@michele._.cava</a></p>
                 </div>
             </div>
 
